@@ -2,6 +2,20 @@
 
 O que iremos automatizar hoje?
 
+Note:
+- Quando entrei no Estado em 2009:
+    - Documentos enviados em papel.
+    - Pastas na rede e arquivos sem compartilhamento.
+    - Caixas de e-mail sobrecarregadas.
+    - Dificuldade de achar informação neste universo.
+- Evolução de ferramentas:
+    - Arquivos em núvem.
+    - SEI.
+- Mas qual problema atual?
+    - Arquivos desinteressantes e difíceis de construir.
+    - Fechados por padrão.
+    - Informação fragmentada.
+
 
 
 ## Agenda
@@ -9,23 +23,35 @@ O que iremos automatizar hoje?
 - Pré-requisitos:
     - GitHub.
     - Instalações.
-    - 101 terminal.
+    - 101 comandos.
     - Markdown.
     - Site estático.
-- Publicação.
+- Publicação automática.
+- O que mais?
 
 
 
-## [Docs as code](https://www.writethedocs.org/guide/docs-as-code/)
-- Filosofia de escrita de documentação com as [mesmas ferramentas utilizadas para criação de códigos](https://ofuturojacomecou.com.br/blog/como-o-github-pode-ser-utilizado-para-facilitar-o-entendimento-das-normas-de-sua-equipe/):
-    - Issues.
-    - Controle de versão.
-    - Texto.
-    - Revisões.
-    - Automatizações.
+## Docs as code
+
+[Filosofia](https://www.writethedocs.org/guide/docs-as-code/) preconiza escrita de documentação com as [mesmas ferramentas utilizadas no desenvolvimento de softwares](https://ofuturojacomecou.com.br/blog/como-o-github-pode-ser-utilizado-para-facilitar-o-entendimento-das-normas-de-sua-equipe/).
+
+Note:
+- Softwar nada mais é do que um conjunto organizado de arquivos de texto.
+- Documentação em geral não é feita pois é um processo chato e moroso.
+- Se a informação só existe na cabeça de quem a gerou ela não existe.
+- Devemos colaborar com nós mesmos, pois você de 2 meses atrás não responde e-mail.
+- Foco no trabalho de fato de escrever e não na forma.
+- Do que precisamos:
+    - Utilização de modelos amigáveis.
+    - Foco no conteúdo ou texto.
+    - Controle de versão via git.
+    - Abertura de tickets para novas ideias ou revisões (Issues).
+    - Revisões em pares.
+    - Automatizações para construção e publicação.
 
 
-## [Docs as code](https://www.writethedocs.org/guide/docs-as-code/)
+
+## Docs as code
 - Exemplos:
   - [Handbook SUGES-MG](https://suges-mg.github.io/handbook/).
   - [Esta apresentação](https://github.com/suges-mg/reveal.js/blob/master/presentations/20230926_docs_as_code/index.md).
@@ -45,9 +71,13 @@ O que iremos automatizar hoje?
 - Python.
 
 
-## 101 terminal
+## 101 comandos
 - Terminal: pwd, ls, cd, mkdir, touch, cat, rm.
 - Git: init, status, log, add, commit, checkout, clone, pull, push.
+
+Note:
+- Utilizados em 99% das vezes.
+
 
 
 ## Markdown
@@ -60,6 +90,9 @@ O que iremos automatizar hoje?
 - Código em linha: "``"
 - Links: `[]()`
 - Imagens: `![]()` - https://imgur.com/
+
+Note:
+- Sintaxe utilizada para maioria das nossas necessidades.
 
 
 ## Markdown Extendido (Atenção)
@@ -77,36 +110,32 @@ O que iremos automatizar hoje?
 
 
 ## Mkdocs
-- Arquitetura
-    - docs/
-    - site/
-    - mkdocs.yml
 
-
-## Mkdocs
-- **Para criar um projeto**: `mkdocs new <nome_projeto>`
-- **Conversão md para html**: `mkdocs build`
-- **Iniciar um servidor**: `mkdocs serve`
-- **Fazer deploy**: `mkdocs gh-deploy`
-- **Para pedir ajuda**: `mkdocs --help`
+```
+$ mkdocs new . # Para iniciar um projeto
+$ mkdocs build # Conversão md para html (comando serve melhor)
+$ mkdocs serve # Iniciar um servidor
+$ mkdocs gh-deploy # Fazer deploy
+$ mkdocs --help # Para pedir ajuda
+```
 
 
 ## Mkdocs
 
 ```
-mkdir meu-primeiro-site-estatico
-cd meu-primeiro-site-estatico
-touch .gitignore # https://www.toptal.com/developers/gitignore/
-touch requirements.txt # mkdocs on pypi
-python -m venv venv # python3 -m venv venv no Linux
-source venv/Scripts/activate # source venv/bin/activate
-pip install -r requirements.txt
-git init
-git branch -M main # Pode ser configurado
-git add .
-git commit -m "Commit Inicial"
-mkdocs new .
-mkdocs serve # Testa mudanças ao vivo
+$ mkdir meu-primeiro-site-estatico
+$ cd meu-primeiro-site-estatico
+$ touch .gitignore # https://www.toptal.com/developers/gitignore/
+$ touch requirements.txt # mkdocs on pypi
+$ python -m venv venv # python3 -m venv venv no Linux
+$ source venv/Scripts/activate # source venv/bin/activate
+$ pip install -r requirements.txt
+$ git init
+$ git branch -M main # Pode ser configurado
+$ git add .
+$ git commit -m "Commit Inicial"
+$ mkdocs new . # docs/ e mkdocs.yml
+$ mkdocs serve # Testa mudanças ao vivo
 ```
 
 
@@ -129,7 +158,7 @@ markdown_extensions:
 ## Customatizações
 
 ```
-# Mermaid
+# Mermaid - não precisa instalar nada via pip
 
 # mkdocs.yml
 markdown_extensions:
@@ -175,4 +204,28 @@ hl_lines="" linenums="" title="Meu Arquivo.py"
 ```
 
 
-## Publicação
+
+## Publicação automática
+
+```
+# Criar repositório GitHub
+git remote add origin <repo-path>.git # camg utilizar https
+git add .
+git commit -m "Finaliza primeira versão"
+git push origin main
+mkdocs gh-deploy # Verifica página publicada.
+```
+
+
+
+## O que mais?
+
+- Consute a documentação [Material](https://squidfunk.github.io/mkdocs-material/getting-started/) para saber como incluir:
+    - [Sistema de cometários](https://suges-mg.github.io/handbook/blog/criacao-de-usuario-para-adminstracao-geral-github/).
+    - [Versionamento](https://transparencia-mg.github.io/guia-transparencia-ativa/).
+    - [Firulas em geral](https://suges-mg.github.io/handbook/blog/acessando-vpn-seplag/#:~:text=criei%20o%20seguinte-,alias,-%3A).
+    - E muito mais!!!
+
+
+
+# Fim
