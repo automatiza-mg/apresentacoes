@@ -1,4 +1,4 @@
-# Como Construir Documentações Impressionantes
+# Documentações Impressionantes
 
 Note:
 - O que iremos automatizar hoje?
