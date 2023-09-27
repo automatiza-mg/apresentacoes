@@ -1,8 +1,7 @@
-# Documentação como código
-
-O que iremos automatizar hoje?
+# Como Construir Documentações Impressionantes
 
 Note:
+- O que iremos automatizar hoje?
 - Quando entrei no Estado em 2009:
     - Documentos enviados em papel.
     - Pastas na rede e arquivos sem compartilhamento.
