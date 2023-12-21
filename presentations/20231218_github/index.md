@@ -182,7 +182,7 @@ Note:
 
 
 
-## Ainda tá confuso
+## Ainda tá confuso?
 
 ![tudo se encaixa](assets/uma_hora_tudo_se_encaixa.png)
 
