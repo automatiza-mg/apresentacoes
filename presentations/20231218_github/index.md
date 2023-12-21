@@ -6,6 +6,7 @@ Note:
 - Objetivo principal é apresentar o GitHub e não ensinar a utilizar.
 - Gostaria da participação de todos e peço que façam perguntas a qualquer momento.
 - Esta é a primeira versão da apresentação, portanto toda sugestão  para simplificar as explicações será bem vinda.
+- Fonte é a minha cabeça.
 
 
 
@@ -115,6 +116,15 @@ Note:
     - Versões documentos Google.
 
 
+## Viagem no tempo
+
+[<img src="assets/git_branch.png" width="650">](https://github.com/lab-mg/automatizacoes/)
+
+Note:
+- Branchs
+- Isso ajuda a acabar com doc_v1, doc_v2, doc_v3.
+
+
 
 ## Comunicação
 
@@ -149,6 +159,7 @@ Note:
 
 
 ## Mas, afinal qual "the jump of the cat"?
+
 <img src="assets/jumping_cat.jpeg" width="650">
 
 Note:
@@ -162,6 +173,12 @@ Note:
 ## Mão na massa
 
 ![mão na massa](assets/mao_na_massa.jpg)
+
+Note:
+- [Template projeto ágil](https://github.com/transparencia-mg/template-projeto-agil).
+- Autorizar actions realizar modificações repositório.
+- Publicar página.
+- Realizar alguma modificação na página inicial.
 
 
 
@@ -178,7 +195,7 @@ Note:
 
 - Criar usuário GitHub.
 - Ser convidado para organização [Lab-mg](https://github.com/lab-mg).
-- Pensarmos um pequeno projeto para trabalharmos.
+- Pensarmos um pequeno projeto para trabalharmos/praticarmos.
 
 
 
